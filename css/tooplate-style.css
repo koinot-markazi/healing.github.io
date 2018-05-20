@@ -346,12 +346,14 @@ http://www.tooplate.com/view/2098-health
     font-weight: 500;
     padding-right: 20px;
     padding-left: 20px;
-    -webkit-transition: all ease-in-out 0.4s;
-    transition: all ease-in-out 0.4s;
+    -webkit-transition: all ease-in-out 0.2s;
+    transition: all ease-in-out 0.2s;
   }
 
-  .navbar-default .navbar-nav > li a:hover {
-    color: #393939 !important;
+  .navbar-default .navbar-nav > li .link:hover {
+    color: #0059FF !important;
+    border-bottom: 3px solid #0059FF;
+    padding-bottom: 0;
   }
 
   .navbar-default .navbar-nav > li > a:hover,

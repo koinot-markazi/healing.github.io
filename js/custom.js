@@ -4,7 +4,7 @@
 
     // PRE LOADER
     $(window).load(function(){
-      $('.preloader').fadeOut(1000); // set duration in brackets    
+      $('.preloader').fadeOut(1000); // set duration in brackets
     });
 
 
@@ -15,16 +15,20 @@
 
 
     // Owl Carousel
-    $('.owl-carousel').owlCarousel({
+    $('.owl-one').owlCarousel({
       animateOut: 'fadeOut',
       items:1,
       loop:true,
       autoplay:true,
+    });
+    $('.owl-two').owlCarousel({
+      items: 4,
+      loop: true
     })
 
 
     // PARALLAX EFFECT
-    $.stellar();  
+    $.stellar();
 
 
     // SMOOTHSCROLL
@@ -36,7 +40,7 @@
           }, 1000);
             event.preventDefault();
       });
-    });  
+    });
 
 
     // WOW ANIMATION
