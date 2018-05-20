@@ -23,7 +23,21 @@
     });
     $('.owl-two').owlCarousel({
       items: 4,
-      loop: true
+      loop: true,
+      responsive: {
+        0:{
+          items: 1
+        },
+        600:{
+          items: 2
+        },
+        960:{
+          items: 4
+        },
+        1200:{
+          items: 4
+        }
+      }
     })
 
 
