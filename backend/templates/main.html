@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+      {% if object %}
+        <title>{{object.title}}</title>
+      {% else%}
+        <title>Healing</title>
+      {% endif %}
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  {% include 'css.html' %}
+
+</head>
+
+  {% block content %}{% endblock %}
+
+  {% include 'js.html' %}
+
+</body>
+</html>

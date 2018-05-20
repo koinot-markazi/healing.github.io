@@ -1,0 +1,365 @@
+{% extends 'main.html' %}
+{% load staticfiles %}
+{% block content %}
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+
+          </div>
+     </section>
+
+     <header>
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-5">
+                         <p>Добро пожаловать в Healing</p>
+                    </div>
+
+                    <div class="col-md-8 col-sm-7 text-align-right">
+                         <span class="phone-icon"><i class="fa fa-phone"></i>{{ page.telnumber }}</span>
+                         <span class="date-icon"><i class="fa fa-calendar-plus-o"></i> 6:00 - 22:00 (Пн-Пт)</span>
+                         <span class="email-icon"><i class="fa fa-envelope-o"></i><a>{{ page.email }}</a></span>
+                    </div>
+
+               </div>
+          </div>
+     </header>
+
+
+     <!-- MENU -->
+     <section class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="index.html" class="navbar-brand">
+                      <img src="{% static 'images/healing.png' %}" alt="" class="healing-logo">
+                    </a>
+               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                         <li><a href="#top" class="smoothScroll link">Главная</a></li>
+                         <li><a href="#about" class="smoothScroll link">Лечение в Индии</a></li>
+                         <li><a href="#team" class="smoothScroll link">Госпитали Индии</a></li>
+                         <li><a href="#news" class="smoothScroll link">Новости</a></li>
+                         <li><a href="#google-map" class="smoothScroll link">Медицинские направления</a></li>
+                         <li class="appointment-btn"><a href="#appointment">Записаться</a></li>
+                    </ul>
+               </div>
+
+          </div>
+     </section>
+
+
+     <!-- HOME -->
+     <section id="home" class="slider" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                         <div class="owl-one owl-carousel owl-theme">
+                              <div class="item item-first">
+                                   <div class="caption">
+                                        <div class="col-md-offset-1 col-md-10">
+                                             <h1>Госпитали Индии</h1>
+                                             <h3>Мы представляем только крупнейшие сети госпиталей Индии с мировым именем и безупречной репутацией, такие как «Аполло Хоспиталс», «Фортис Хелскеа», «Вокхард Хоспиталс» и ряд других сетевых и несетевых госпиталей Индии.</h3>
+                                             <br>
+                                             <a href="#team" class="section-btn btn btn-default smoothScroll">Наши партнеры</a>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="item item-second">
+                                   <div class="caption">
+                                        <div class="col-md-offset-1 col-md-10">
+                                           <h1>Лечение в Индии</h1>
+                                           <h3>Высокое качество медицинской помощи на уровне лучших мировых стандартов</h3>
+                                           <br>
+                                           <a href="#about" class="section-btn btn btn-default btn-gray smoothScroll">Подробнее О нас</a>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="item item-third">
+                                   <div class="caption">
+                                        <div class="col-md-offset-1 col-md-10">
+                                             <h1>Следите за новостями</h1>
+                                             <h3>Не пропустите важные события в сфере мединцине</h3>
+                                             <br>
+                                             <a href="#news" class="section-btn btn btn-default btn-blue smoothScroll">Читать подробнее</a>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+
+               </div>
+          </div>
+     </section>
+
+
+     <!-- ABOUT -->
+     <section id="about">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-6">
+                         <div class="about-info">
+                              <h2 class="wow fadeInUp" data-wow-delay="0.6s">Лечение в Индии</h2>
+                              <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                   <p>Современные медицинские и реабилитационные технологии мирового уровня, высококвалифицированные врачи, комплексный подход в сочетании с экономичностью лечения, предлагаемые в лучших госпиталях Индии, привлекают год от года большее число пациентов из разных стран</p>
+                                   <p>Уже сейчас Индия является крупнейшей страной мирового медицинского туризма, принимая ежегодно пациентов из 120 стран мира на лечение самых серьезных заболеваний. В 2012 году Индию, с целью лечения, в первую очередь хирургического, посетило более полумиллиона пациентов из-за рубежа, в том числе стран Европы, США, Канады, Австралии, России и СНГ.</p><br>
+                                   <p><b>Мы предлагаем услуги: </b></p>
+                                   <ul class="list-service">
+                                     <li><a>Онкология</a></li>
+                                     <li><a>Нейрохирургия</a></li>
+                                     <li><a>Кардиохирургия</a></li>
+                                     <li><a>Трансплантология</a></li>
+                                     <li><a>Ортопедия</a></li>
+                                     <li><a>Обследования</a></li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+
+     <section id="team" data-stellar-background-ratio="1">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-6">
+                         <div class="about-info">
+                              <h2 class="wow fadeInUp" data-wow-delay="0.1s">Госпитали Индии</h2>
+                         </div>
+                    </div>
+                    <div class="clearfix"></div>
+
+                    <div class="owl-two owl-carousel">
+
+                           <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+
+                             <a>
+
+                               <img src="{% static 'images/1.jpg' %}" class="img-responsive" alt="">
+
+                               <div class="team-info">
+                                <h3>Wockhardt</h3>
+                                <p>India</p>
+                               </div>
+                            </a>
+
+                           </div>
+
+                           <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
+
+                             <a>
+
+                                <img src="{% static 'images/2.jpg' %}" class="img-responsive" alt="">
+
+                                <div class="team-info">
+                                  <h3>Medanta</h3>
+                                  <p>India</p>
+                                </div>
+                             </a>
+                           </div>
+
+                           <div class="team-thumb wow fadeInUp" data-wow-delay="0.6s">
+                             <a>
+
+                               <img src="{% static 'images/3.jpg' %}" class="img-responsive" alt="">
+
+                               <div class="team-info">
+                                 <h3>Fortis</h3>
+                                 <p>India</p>
+                               </div>
+                             </a>
+
+                           </div>
+
+                  </div>
+               </div>
+          </div>
+     </section>
+
+
+     <!-- NEWS -->
+     <section id="news" data-stellar-background-ratio="2.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                              <h2>Последние новости</h2>
+                         </div>
+                    </div>
+
+                    {% for i in news %}
+                    <div class="col-md-4 col-sm-6">
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
+                              <a href="{% url 'post' id=i.id %}">
+                                   <img src="{{ i.image.url }}" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span>{{ i.date }}</span>
+                                   <h3><a href="{% url 'post' id=i.id %}">{{ i.title }}</a></h3>
+                                   <p>{{ i.short_content }}</p>
+                              </div>
+                         </div>
+                    </div>
+                    {% endfor %}
+
+               </div>
+          </div>
+     </section>
+
+
+     <!-- MAKE AN APPOINTMENT -->
+     <section id="appointment" data-stellar-background-ratio="3">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-6">
+                         <img src="{% static 'images/appointment-image.jpg' %}" class="img-responsive" alt="">
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <form id="appointment-form" role="form" method="post" action="register/">
+                          {% csrf_token %}
+
+                              <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
+                                   <h2>Назначить встречу</h2>
+                              </div>
+
+                              <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                   <div class="col-md-6 col-sm-6">
+                                        <label for="name">Имя</label>
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Имя">
+                                   </div>
+
+                                   <div class="col-md-6 col-sm-6">
+                                        <label for="email">Эл. Почта</label>
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Эл. Почта">
+                                   </div>
+
+                                   <div class="col-md-6 col-sm-6">
+                                        <label for="date">Выбрать дату</label>
+                                        <input type="date" name="date" value="" class="form-control">
+                                   </div>
+
+                                   <div class="col-md-6 col-sm-6">
+                                        <label for="select">Департамент</label>
+                                        <select class="form-control" name="department">
+                                             <option value="Онкология">Онкология</option>
+                                             <option value="Нейрохирургия">Нейрохирургия</option>
+                                             <option value="Кардиохирургия">Кардиохирургия</option>
+                                             <option value="Трансплантология">Трансплантология</option>
+                                             <option value="Ортопедия">Ортопедия</option>
+                                             <option value="Обследования">Обследования</option>
+                                        </select>
+                                   </div>
+
+                                   <div class="col-md-12 col-sm-12">
+                                        <label for="telephone">Номер телефона</label>
+                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Номер телефона">
+                                        <label for="Message">Дополнительно</label>
+                                        <textarea class="form-control" rows="5" id="message" name="message" placeholder="Текст"></textarea>
+                                        <button type="submit" class="form-control" id="cf-submit" name="submit">Отправить</button>
+                                   </div>
+                              </div>
+                        </form>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+
+     <section id="google-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.3030413476204!2d100.5641230193719!3d13.757206847615207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf51ce6427b7918fc!2sG+Tower!5e0!3m2!1sen!2sth!4v1510722015945" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+     </section>
+
+
+     <!-- FOOTER -->
+     <footer data-stellar-background-ratio="5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="footer-thumb">
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Контакты</h4>
+                              <p>{{ page.contacts_description }}</p>
+
+                              <div class="contact-info">
+                                   <p><i class="fa fa-phone"></i>{{ page.telnumber }}</p>
+                                   <p><i class="fa fa-envelope-o"></i> <a>{{ page.email }}</a></p>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="footer-thumb">
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Последние новости</h4>
+                              {% for i in news %}
+                              <div class="latest-stories">
+                                   <div class="stories-image">
+                                        <a href="{% url 'post' id=i.id %}"><img src="{{ i.image.url }}" class="img-responsive" alt=""></a>
+                                   </div>
+                                   <div class="stories-info">
+                                        <a href="{% url 'post' id=i.id %}"><h5>{{ i.title }}</h5></a>
+                                        <span>{{ i.date }}</span>
+                                   </div>
+                              </div>
+                              {% endfor %}
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="footer-thumb">
+                              <div class="opening-hours">
+                                   <h4 class="wow fadeInUp" data-wow-delay="0.4s">Рабочее время</h4>
+                                   <p>Понедельник - Пятница <span>06:00 - 22:00</span></p>
+                                   <p>Суббота <span>09:00 - 20:00</span></p>
+                                   <p>Воскресеньн <span>Закрыто</span></p>
+                              </div>
+
+                              <ul class="social-icon">
+                                   <li><a href="{{ page.facebook_link }}" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                   <li><a href="{{ page.twitter_link }}" class="fa fa-twitter"></a></li>
+                                   <li><a href="{{ page.instagram_link }}" class="fa fa-instagram"></a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+                    <div class="col-md-12 col-sm-12 border-top">
+                         <div class="col-md-4 col-sm-6">
+                              <div class="copyright-text">
+                                   <p>Copyright &copy; 2018 Healing</p>
+                              </div>
+                         </div>
+                         <div class="col-md-6 col-sm-6">
+                         </div>
+                         <div class="col-md-2 col-sm-2 text-align-center">
+                              <div class="angle-up-btn">
+                                  <a href="#top" class="smoothScroll wow fadeInUp" data-wow-delay="1.2s"><i class="fa fa-angle-up"></i></a>
+                              </div>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </footer>
+{% endblock %}

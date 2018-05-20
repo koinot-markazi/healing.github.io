@@ -1,0 +1,179 @@
+{% extends 'main.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+
+          </div>
+     </section>
+
+
+     <header>
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-5">
+                         <p>Добро пожаловать в Healing</p>
+                    </div>
+
+                    <div class="col-md-8 col-sm-7 text-align-right">
+                         <span class="phone-icon"><i class="fa fa-phone"></i>{{ page.telnumber }}</span>
+                         <span class="date-icon"><i class="fa fa-calendar-plus-o"></i> 6:00 - 22:00 (Пн-Пт)</span>
+                         <span class="email-icon"><i class="fa fa-envelope-o"></i> <a>{{ page.email }}</a></span>
+                    </div>
+
+               </div>
+          </div>
+     </header>
+
+
+     <!-- MENU -->
+     <section class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <a href="index.html" class="navbar-brand">
+                      <img src="{% static 'images/healing.png' %}" alt="" class="healing-logo">
+                    </a>
+               </div>
+
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                         <li><a href="/#top" class="smoothScroll link">Главная</a></li>
+                         <li><a href="/#about" class="smoothScroll link">Лечение в Индии</a></li>
+                         <li><a href="/#team" class="smoothScroll link">Госпитали Индии</a></li>
+                         <li><a href="/#news" class="smoothScroll link">Новости</a></li>
+                         <li><a href="/#google-map" class="smoothScroll link">Медицинские направления</a></li>
+                         <li class="appointment-btn"><a href="#appointment">Записаться</a></li>
+                    </ul>
+               </div>
+
+          </div>
+     </section>
+
+
+     <!-- NEWS DETAIL -->
+     <section id="news-detail" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-8 col-sm-7">
+                         <div class="news-detail-thumb">
+                              <div class="news-image">
+                                   <img src="{{ object.image.url }}" class="img-responsive" alt="">
+                              </div>
+                              <h3>Review Annual Medical Research</h3>
+                              {{ object.content|safe }}
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-5">
+                         <div class="news-sidebar">
+                                        {% for i in short_news %}
+                                        <div class="media">
+                                             <div class="media-object pull-left">
+                                                  <a href="{% url 'post' id=i.id %}"><img src="{{ i.image.url }}" class="img-responsive" alt=""></a>
+                                             </div>
+                                             <div class="media-body">
+                                                  <h4 class="media-heading"><a href="{% url 'post' id=i.id %}">{{ i.title }}</a></h4>
+                                             </div>
+                                        </div>
+                                        {% endfor %}
+                              </div>
+
+                              <div class="news-tags">
+                                   <h4>Tags</h4>
+                                   {% for i in tags %}
+                                        <li><a>{{ i }}</a></li>
+                                   {% endfor %}
+                              </div>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+
+
+     <!-- FOOTER -->
+     <footer data-stellar-background-ratio="5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="footer-thumb">
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Контакты</h4>
+                              <p>{{ page.contacts_description }}</p>
+
+                              <div class="contact-info">
+                                   <p><i class="fa fa-phone"></i>{{ page.telnumber }}</p>
+                                   <p><i class="fa fa-envelope-o"></i> <a>{{ page.email }}</a></p>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="footer-thumb">
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Последние новости</h4>
+                              {% for i in short_news %}
+                              <div class="latest-stories">
+                                   <div class="stories-image">
+                                        <a href="{% url 'post' id=i.id %}"><img src="{{ i.image.url }}" class="img-responsive" alt=""></a>
+                                   </div>
+                                   <div class="stories-info">
+                                        <a href="{% url 'post' id=i.id %}"><h5>{{ i.title }}</h5></a>
+                                        <span>{{ i.date }}</span>
+                                   </div>
+                              </div>
+                              {% endfor %}
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="footer-thumb">
+                              <div class="opening-hours">
+                                   <h4 class="wow fadeInUp" data-wow-delay="0.4s">Рабочее время</h4>
+                                   <p>Понедельник - Пятница <span>06:00 - 22:00</span></p>
+                                   <p>Суббота <span>09:00 - 20:00</span></p>
+                                   <p>Воскресеньн <span>Закрыто</span></p>
+                              </div>
+
+                              <ul class="social-icon">
+                                   <li><a href="{{ page.facobook_link }}" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                   <li><a href="{{ page.twitter_link }}" class="fa fa-twitter"></a></li>
+                                   <li><a href="{{ page.instagram_link }}" class="fa fa-instagram"></a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+                    <div class="col-md-12 col-sm-12 border-top">
+                         <div class="col-md-4 col-sm-6">
+                              <div class="copyright-text">
+                                   <p>Copyright &copy; 2018 Healing</p>
+                              </div>
+                         </div>
+                         <div class="col-md-6 col-sm-6">
+                         </div>
+                         <div class="col-md-2 col-sm-2 text-align-center">
+                              <div class="angle-up-btn">
+                                  <a href="#top" class="smoothScroll wow fadeInUp" data-wow-delay="1.2s"><i class="fa fa-angle-up"></i></a>
+                              </div>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </footer>
+{% endblock %}
