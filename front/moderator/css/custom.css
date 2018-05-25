@@ -1,0 +1,29 @@
+.admin-page .admin-section .row .admin-title{
+  margin-bottom: 20px;
+}
+.login-page{
+  margin-top: 25vh;
+}
+.image img{
+  width: 100%;
+  box-shadow: 0 0 10px silver;
+}
+.image-add{
+  width: 100%;
+  /* height: 100px; */
+  text-align: center;
+}
+.image-add i{
+  padding: 100px;
+  font-size: 5em;
+  cursor: pointer;
+}
+.image_add .file_choose{
+  display: none;
+}
+.admin-section-posts .row .post-content{
+  padding: 10px;
+}
+.admin-section-posts .row img{
+  width: 100%;
+}
